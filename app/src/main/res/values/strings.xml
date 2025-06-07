@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">EduTransporte</string>
+    <string name="login_title">Bem-vindo!</string>
+    <string name="email_hint">Email</string>
+    <string name="password_hint">Senha</string>
+    <string name="student_radio">Aluno/Responsável</string>
+    <string name="driver_radio">Motorista</string>
+    <string name="login_button">Entrar</string>
+    <string name="register_button">Cadastrar-se</string>
+    <string name="forgot_password">Esqueceu a senha?</string>
+    <string name="next_trip">🚌 Próxima Viagem</string>
+    <string name="schedule_days">📅 Marcar Dias</string>
+    <string name="messages">💬 Mensagens</string>
+    <string name="real_time_location">📍 Localização em Tempo Real</string>
+    <string name="start_trip">🚌 Iniciar Viagem</string>
+    <string name="settings">⚙️ Configurações</string>
+    <string name="students_today">👥 Alunos para hoje:</string>
+</resources>

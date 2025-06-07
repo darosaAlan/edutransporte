@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_mensagem_recebida"
+        android:padding="12dp"
+        android:layout_marginBottom="4dp"
+        android:maxWidth="280dp">
+
+        <TextView
+            android:id="@+id/txt_remetente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motorista"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_blue"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/txt_mensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mensagem de exemplo"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"/>
+
+        <TextView
+            android:id="@+id/txt_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="09:00"
+            android:textSize="12sp"
+            android:textColor="@color/gray_text"
+            android:layout_gravity="end"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

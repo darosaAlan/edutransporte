@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/bg_header"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🚌 EduTransporte"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_profile"
+                android:background="@drawable/bg_circle_white"/>
+
+        </LinearLayout>
+
+        <!-- Saudação -->
+        <TextView
+            android:id="@+id/txt_nome_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Olá, Ana! 👋"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Card Próxima Viagem -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_proxima_viagem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🚌 Próxima Viagem"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary_blue"
+                    android:layout_marginBottom="12dp"/>
+
+                <TextView
+                    android:id="@+id/txt_horario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Horário: 07:30"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:id="@+id/txt_destino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Destino: Colégio São José"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status: ✅ Confirmado"
+                    android:textSize="16sp"
+                    android:textColor="@color/green"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Info Motorista -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_info_card"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/txt_motorista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📍 Motorista: João Silva"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Placa: ABC-1234 | Tel: (11) 99999-9999"
+                android:textSize="14sp"
+                android:textColor="@color/gray_text"/>
+
+        </LinearLayout>
+
+        <!-- Notificação -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_notification"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚠️"
+                android:textSize="20sp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Aviso: Atraso de 10 minutos devido ao trânsito"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+        <!-- Botões -->
+        <Button
+            android:id="@+id/btn_marcar_dias"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📅 Marcar Dias"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_primary"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_mensagens"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="💬 Mensagens"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_secondary"
+            android:textColor="@color/white"
+            android:layout_marginBottom="12dp"/>
+
+        <Button
+            android:id="@+id/btn_localizacao"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="📍 Localização em Tempo Real"
+            android:textSize="16sp"
+            android:background="@drawable/bg_button_success"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</ScrollView>
