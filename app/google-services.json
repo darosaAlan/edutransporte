@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "396220757933",
+    "project_id": "edutransporte-4d92c",
+    "storage_bucket": "edutransporte-4d92c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:396220757933:android:8b086298d08b93d4035324",
+        "android_client_info": {
+          "package_name": "com.example.edutransporte"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUZJtceQvcI_Uvmjtwn5RWCdgsvXhowLM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
