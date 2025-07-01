@@ -3,6 +3,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.edutransporte">
 
+    <!-- Permissões necessárias para GPS e Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    
+    <!-- Permissões para Notificações -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
 
     <application
         android:allowBackup="true"
@@ -15,25 +26,65 @@
         android:theme="@style/Theme.EduTransportes"
         tools:targetApi="31">
 
+        <!-- API Key do Google Maps -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyBWNTy_Dmr_zEL1P9whlBO1gVrx8ilTOB8" />
+
+        <!-- Tela de Login (Principal) -->
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
+        <!-- Tela de Cadastro -->
         <activity
-            android:name=".ViagemActivity"
+            android:name=".CadastroActivity"
             android:exported="false" />
 
+        <!-- Dashboard do Aluno -->
+        <activity
+            android:name=".DashboardAlunoActivity"
+            android:exported="false" />
+
+        <!-- Dashboard do Motorista -->
+        <activity
+            android:name=".DashboardMotoristaActivity"
+            android:exported="false" />
+
+        <!-- Agendamento -->
+        <activity
+            android:name=".AgendamentoActivity"
+            android:exported="false" />
+
+        <!-- Mensagens Aluno -->
+        <activity
+            android:name=".MensagensActivity"
+            android:exported="false" />
+
+        <!-- Mensagens Motorista -->
         <activity
             android:name=".MensagensMotoristaActivity"
             android:exported="false" />
 
+        <!-- Viagem -->
+        <activity
+            android:name=".ViagemActivity"
+            android:exported="false" />
+
+        <!-- Configurações -->
         <activity
             android:name=".ConfiguracoesActivity"
+            android:exported="false" />
+
+        <!-- Localização -->
+        <activity
+            android:name=".LocalizacaoActivity"
             android:exported="false" />
 
     </application>

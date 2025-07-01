@@ -1,14 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:orientation="vertical"
+    android:background="@color/white">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Header com informações -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tela de Localização"
-        android:textSize="24sp"
-        android:layout_gravity="center" />
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/bg_header">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/txt_localizacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📍 Aguardando localização..."
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"
+            tools:text="📍 Lat: -23.550520, Lng: -46.633308" />
+
+        <TextView
+            android:id="@+id/txt_velocidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚗 Velocidade: -- km/h"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"
+            tools:text="🚗 Velocidade: 45.2 km/h" />
+
+        <TextView
+            android:id="@+id/txt_motorista"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👨‍💼 Motorista: --"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="8dp"
+            tools:text="👨‍💼 Motorista: João Silva" />
+
+        <TextView
+            android:id="@+id/txt_placa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🚐 Placa: --"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            tools:text="🚐 Placa: ABC-1234" />
+
+    </LinearLayout>
+
+    <!-- Mapa -->
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

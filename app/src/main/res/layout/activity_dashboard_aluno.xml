@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background_gray">
+    android:background="#f5f5f5">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -11,52 +12,55 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Header -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            android:padding="16dp"
-            android:background="@drawable/bg_header"
-            android:layout_marginBottom="16dp">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="🚌 EduTransporte"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
-
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_profile"
-                android:background="@drawable/bg_circle_white"/>
-
-        </LinearLayout>
-
-        <!-- Saudação -->
-        <TextView
-            android:id="@+id/txt_nome_usuario"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Olá, Ana! 👋"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            android:textColor="@color/text_primary"
-            android:layout_marginBottom="20dp"/>
-
-        <!-- Card Próxima Viagem -->
+        <!-- Header do Usuário -->
         <androidx.cardview.widget.CardView
-            android:id="@+id/card_proxima_viagem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             app:cardCornerRadius="12dp"
             app:cardElevation="4dp"
-            android:layout_marginBottom="16dp">
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:id="@+id/txt_nome_aluno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="👤 Nome do Aluno"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="#333333"
+                    android:layout_marginBottom="8dp"
+                    tools:text="👤 João Silva" />
+
+                <TextView
+                    android:id="@+id/txt_email_aluno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="📧 email@exemplo.com"
+                    android:textSize="14sp"
+                    android:textColor="#666666"
+                    tools:text="📧 joao.silva@email.com" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Card de Localização em Tempo Real -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_localizacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="#e8f5e8">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -65,122 +69,106 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="🚌 Próxima Viagem"
-                    android:textSize="18sp"
+                    android:text="🚐 Localização da Van"
+                    android:textSize="16sp"
                     android:textStyle="bold"
-                    android:textColor="@color/primary_blue"
-                    android:layout_marginBottom="12dp"/>
+                    android:textColor="#2e7d32"
+                    android:layout_marginBottom="12dp" />
 
                 <TextView
-                    android:id="@+id/txt_horario"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_status_localizacao"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Horário: 07:30"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="4dp"/>
+                    android:text="🟢 Van em movimento"
+                    android:textSize="14sp"
+                    android:textColor="#2e7d32"
+                    android:layout_marginBottom="8dp" />
 
                 <TextView
-                    android:id="@+id/txt_destino"
-                    android:layout_width="wrap_content"
+                    android:id="@+id/txt_info_van"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Destino: Colégio São José"
-                    android:textSize="16sp"
-                    android:layout_marginBottom="4dp"/>
+                    android:text="👨‍💼 João Silva\n🚐 ABC-1234"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:layout_marginBottom="12dp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
+                <Button
+                    android:id="@+id/btn_ver_localizacao"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Status: ✅ Confirmado"
-                    android:textSize="16sp"
-                    android:textColor="@color/green"/>
+                    android:text="📍 Ver no Mapa"
+                    android:textColor="@color/white"
+                    android:background="@drawable/bg_button_primary"
+                    android:padding="12dp" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <!-- Info Motorista -->
+        <!-- Botões de Ação -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_info_card"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/txt_motorista"
-                android:layout_width="wrap_content"
+            <!-- Botão Localização -->
+            <Button
+                android:id="@+id/btn_localizacao"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="📍 Motorista: João Silva"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:layout_marginBottom="4dp"/>
+                android:text="📍 Acompanhar Localização"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_primary"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
+            <!-- Botão Mensagens -->
+            <Button
+                android:id="@+id/btn_mensagens"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Placa: ABC-1234 | Tel: (11) 99999-9999"
-                android:textSize="14sp"
-                android:textColor="@color/gray_text"/>
+                android:text="💬 Mensagens"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_secondary"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Botão Agendamento -->
+            <Button
+                android:id="@+id/btn_agendamento"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="📅 Agendamento"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_success"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Botão Configurações -->
+            <Button
+                android:id="@+id/btn_configuracoes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Configurações"
+                android:textColor="@color/primary_blue"
+                android:background="@drawable/bg_button_outline"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- Botão Logout -->
+            <Button
+                android:id="@+id/btn_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🚪 Sair"
+                android:textColor="@color/white"
+                android:background="@drawable/bg_button_error"
+                android:padding="16dp" />
 
         </LinearLayout>
-
-        <!-- Notificação -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/bg_notification"
-            android:padding="12dp"
-            android:layout_marginBottom="20dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="⚠️"
-                android:textSize="20sp"
-                android:layout_marginEnd="8dp"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Aviso: Atraso de 10 minutos devido ao trânsito"
-                android:textSize="14sp"/>
-
-        </LinearLayout>
-
-        <!-- Botões -->
-        <Button
-            android:id="@+id/btn_marcar_dias"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="📅 Marcar Dias"
-            android:textSize="16sp"
-            android:background="@drawable/bg_button_primary"
-            android:textColor="@color/white"
-            android:layout_marginBottom="12dp"/>
-
-        <Button
-            android:id="@+id/btn_mensagens"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="💬 Mensagens"
-            android:textSize="16sp"
-            android:background="@drawable/bg_button_secondary"
-            android:textColor="@color/white"
-            android:layout_marginBottom="12dp"/>
-
-        <Button
-            android:id="@+id/btn_localizacao"
-            android:layout_width="match_parent"
-            android:layout_height="56dp"
-            android:text="📍 Localização em Tempo Real"
-            android:textSize="16sp"
-            android:background="@drawable/bg_button_success"
-            android:textColor="@color/white"/>
 
     </LinearLayout>
 

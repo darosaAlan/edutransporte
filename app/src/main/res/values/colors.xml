@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary_blue">#2196F3</color>
-    <color name="primary_blue_dark">#1976D2</color>
-    <color name="secondary_orange">#FF9800</color>
-    <color name="secondary_orange_dark">#F57C00</color>
-    <color name="success_green">#4CAF50</color>
-    <color name="success_green_dark">#388E3C</color>
-    <color name="danger_red">#F44336</color>
+    <!-- Cores principais - Escala tom sobre tom baseada em azul -->
+    <color name="primary_blue">#1976D2</color>
+    <color name="primary_blue_light">#42A5F5</color>
+    <color name="primary_blue_dark">#1565C0</color>
+    <color name="primary_blue_lighter">#90CAF9</color>
+    <color name="primary_blue_darker">#0D47A1</color>
+    
+    <!-- Cores secundárias - Tons complementares -->
+    <color name="secondary_teal">#00796B</color>
+    <color name="secondary_teal_light">#26A69A</color>
+    <color name="secondary_teal_dark">#004D40</color>
+    
+    <!-- Cores de sucesso - Tons de verde -->
+    <color name="success_green">#388E3C</color>
+    <color name="success_green_light">#66BB6A</color>
+    <color name="success_green_dark">#2E7D32</color>
+    
+    <!-- Cores de aviso - Tons de laranja -->
+    <color name="warning_orange">#F57C00</color>
+    <color name="warning_orange_light">#FFB74D</color>
+    <color name="warning_orange_dark">#E65100</color>
+    
+    <!-- Cores de erro - Tons de vermelho -->
+    <color name="error_red">#D32F2F</color>
+    <color name="error_red_light">#EF5350</color>
+    <color name="error_red_dark">#C62828</color>
+    
+    <!-- Cores neutras -->
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="background_gray">#F5F5F5</color>
+    <color name="gray_light">#F5F5F5</color>
+    <color name="gray_medium">#E0E0E0</color>
+    <color name="gray_dark">#757575</color>
+    <color name="gray_text">#666666</color>
     <color name="text_primary">#212121</color>
     <color name="text_secondary">#757575</color>
-    <color name="gray_text">#9E9E9E</color>
-    <color name="light_gray">#E0E0E0</color>
-    <color name="green">#4CAF50</color>
+    
+    <!-- Cores de fundo -->
+    <color name="background_gray">#FAFAFA</color>
+    <color name="surface_white">#FFFFFF</color>
+    
+    <!-- Cores de transparência -->
+    <color name="transparent">#00000000</color>
+    <color name="semi_transparent_black">#80000000</color>
+    <color name="semi_transparent_white">#80FFFFFF</color>
 </resources>

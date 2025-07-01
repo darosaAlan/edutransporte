@@ -3,16 +3,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/background_gray"
     android:padding="24dp"
-    android:gravity="center"
-    android:background="@color/white">
+    android:gravity="center">
 
+    <!-- Logo -->
     <ImageView
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:src="@drawable/ic_bus_logo"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="32dp"
+        android:contentDescription="Logo EduTransporte" />
 
+    <!-- Título -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -20,87 +23,125 @@
         android:textSize="28sp"
         android:textStyle="bold"
         android:textColor="@color/primary_blue"
-        android:layout_marginBottom="8dp"/>
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Faça login para acessar o sistema"
+        android:text="Transporte Escolar Inteligente"
         android:textSize="16sp"
-        android:textColor="@color/gray_text"
-        android:layout_marginBottom="32dp"/>
+        android:textColor="@color/text_secondary"
+        android:layout_marginBottom="48dp" />
 
-    <EditText
-        android:id="@+id/edit_email"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:background="@drawable/bg_edit_text"
-        android:padding="16dp"
-        android:layout_marginBottom="16dp"/>
-
-    <EditText
-        android:id="@+id/edit_senha"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:hint="Senha"
-        android:inputType="textPassword"
-        android:background="@drawable/bg_edit_text"
-        android:padding="16dp"
-        android:layout_marginBottom="24dp"/>
-
-    <RadioGroup
-        android:id="@+id/radio_group_tipo_usuario"
+    <!-- Formulário de Login -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp">
+        android:orientation="vertical"
+        android:background="@color/surface_white"
+        android:padding="24dp"
+        android:elevation="4dp">
 
-        <RadioButton
-            android:id="@+id/radio_aluno"
-            android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Aluno/Responsável"
-            android:textSize="16sp"
-            android:padding="8dp"/>
+            android:text="Entrar"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
 
-        <RadioButton
-            android:id="@+id/radio_motorista"
-            android:layout_width="wrap_content"
+        <!-- Campo Email -->
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Motorista"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/bg_edit_text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" />
+
+        <!-- Campo Senha -->
+        <EditText
+            android:id="@+id/edit_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:background="@drawable/bg_edit_text"
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary" />
+
+        <!-- Seleção de Tipo de Usuário -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Usuário:"
+            android:textSize="14sp"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/radio_group_tipo_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <RadioButton
+                android:id="@+id/radio_aluno"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Aluno"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:checked="true"
+                android:padding="8dp" />
+
+            <RadioButton
+                android:id="@+id/radio_motorista"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Motorista"
+                android:textSize="14sp"
+                android:textColor="@color/text_primary"
+                android:padding="8dp" />
+
+        </RadioGroup>
+
+        <!-- Botão Entrar -->
+        <Button
+            android:id="@+id/btn_entrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textColor="@color/white"
+            android:background="@drawable/bg_button_primary"
+            android:padding="16dp"
             android:textSize="16sp"
-            android:padding="8dp"/>
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp" />
 
-    </RadioGroup>
+        <!-- Botão Cadastrar -->
+        <Button
+            android:id="@+id/btn_cadastrar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Criar Conta"
+            android:textColor="@color/primary_blue"
+            android:background="@drawable/bg_button_outline"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/btn_entrar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:text="Entrar"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:background="@drawable/bg_button_primary"
-        android:textColor="@color/white"
-        android:layout_marginBottom="12dp"/>
-
-    <Button
-        android:id="@+id/btn_cadastrar"
-        android:layout_width="match_parent"
-        android:layout_height="56dp"
-        android:text="Cadastrar-se"
-        android:textSize="18sp"
-        android:background="@drawable/bg_button_secondary"
-        android:textColor="@color/white"
-        android:layout_marginBottom="16dp"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Esqueceu a senha?"
-        android:textSize="14sp"
-        android:textColor="@color/primary_blue"
-        android:textStyle="bold"/>
+    </LinearLayout>
 
 </LinearLayout>
